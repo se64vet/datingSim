@@ -1,0 +1,469 @@
+{
+    "scenes": {
+        "start": {
+            "text": "Bạn thức dậy với ánh nắng mặt trời chiếu qua rèm cửa. Đó là buổi sáng thứ Bảy, và bạn hoàn toàn không có kế hoạch gì. Bạn duỗi người, cầm điện thoại lên, và thấy một tin nhắn từ <span class='character-name'>Alex</span>, bạn trai của bạn được 8 tháng.<br><br><strong>Tin nhắn của Alex:</strong> \"Chào công chúa ngủ! 😊 Anh chán muốn chết. Em muốn làm gì vui hôm nay không?\"",
+            "choices": [
+                {
+                    "text": "\"Anh ơi em vẫn đang mặc đồ ngủ! Cho em 30 phút để trông người ta chút 😅\"",
+                    "next": "response_pajamas",
+                    "stats": {
+                        "thoughtful": 1
+                    }
+                },
+                {
+                    "text": "\"CÓ! Em vừa nằm đây nghĩ không biết làm gì với cuộc đời mình\"",
+                    "next": "response_excited",
+                    "stats": {
+                        "adventure": 1
+                    }
+                },
+                {
+                    "text": "\"Chỉ khi nào anh hứa sẽ làm cho nó thú vị thôi 😏\"",
+                    "next": "response_flirty",
+                    "stats": {
+                        "playful": 1,
+                        "romance": 1
+                    }
+                }
+            ]
+        },
+        "response_pajamas": {
+            "text": "<span class='character-name'>Alex</span> trả lời: \"Em cứ từ từ! Anh sẽ mua cà phê cho cả hai. Hôm nay em uống gì?\"<br><br>Bạn nhanh chóng quyết định cách chuẩn bị...",
+            "choices": [
+                {
+                    "text": "Tắm nhanh và mặc đồ thường",
+                    "next": "coffee_shop",
+                    "stats": {
+                        "thoughtful": 1
+                    }
+                },
+                {
+                    "text": "Mặc lại đồ hôm qua và khoác áo jacket xinh",
+                    "next": "coffee_shop",
+                    "stats": {
+                        "playful": 1
+                    }
+                },
+                {
+                    "text": "Làm đẹp trọn vẹn - em muốn trông hoàn hảo",
+                    "next": "coffee_shop",
+                    "stats": {
+                        "romance": 1
+                    }
+                }
+            ]
+        },
+        "response_excited": {
+            "text": "<span class='character-name'>Alex</span> trả lời: \"Hoàn hảo! Anh có một vài ý tưởng. Em muốn nghe không hay chúng ta tùy hứng?\"",
+            "choices": [
+                {
+                    "text": "\"Kể cho em nghe ý tưởng của anh đi! Em cần lựa chọn\"",
+                    "next": "coffee_shop",
+                    "stats": {
+                        "thoughtful": 1
+                    }
+                },
+                {
+                    "text": "\"Bất ngờ cho em đi! Em tin anh\"",
+                    "next": "coffee_shop",
+                    "stats": {
+                        "romance": 1
+                    }
+                },
+                {
+                    "text": "\"Hãy tùy hứng đi - cuộc phiêu lưu đang chờ!\"",
+                    "next": "coffee_shop",
+                    "stats": {
+                        "adventure": 2
+                    }
+                }
+            ]
+        },
+        "response_flirty": {
+            "text": "<span class='character-name'>Alex</span> trả lời: \"Thách thức được chấp nhận! Anh biết chính xác chúng ta sẽ làm gì rồi...\"<br><br>Giọng điệu bí ẩn của anh ấy khiến bạn tò mò và hứng thú.",
+            "choices": [
+                {
+                    "text": "\"Bí ẩn quá... em thích. Đến đón em đi!\"",
+                    "next": "coffee_shop",
+                    "stats": {
+                        "romance": 1,
+                        "adventure": 1
+                    }
+                },
+                {
+                    "text": "\"Thú vị như thế nào? Em có nên lo lắng không? 😂\"",
+                    "next": "coffee_shop",
+                    "stats": {
+                        "playful": 2
+                    }
+                },
+                {
+                    "text": "\"Mang đồ ăn vặt đi và em sẽ tham gia bất cứ gì\"",
+                    "next": "coffee_shop",
+                    "stats": {
+                        "playful": 1,
+                        "thoughtful": 1
+                    }
+                }
+            ]
+        },
+        "coffee_shop": {
+            "text": "Bạn gặp <span class='character-name'>Alex</span> tại \"The Grind,\" quán cà phê yêu thích của các bạn. Anh ấy đã đặt sẵn đồ uống quen thuộc của bạn - iced caramel macchiato với thêm kem.<br><br><span class='character-name'>Alex:</span> \"Anh đang nghĩ... chúng ta có thể xem triển lãm nghệ thuật mới ở trung tâm, hoặc có lễ hội xe đồ ăn ở công viên, hoặc...\" <em>anh cười tinh nghịch</em> \"chúng ta có thể xây lều chăn trong căn hộ của anh như lúc 12 tuổi.\"",
+            "choices": [
+                {
+                    "text": "\"Triển lãm nghệ thuật nghe sang trọng! Hãy văn hóa hóa bản thân\"",
+                    "next": "art_installation",
+                    "stats": {
+                        "thoughtful": 2
+                    }
+                },
+                {
+                    "text": "\"Lễ hội xe đồ ăn! Bụng em đã hào hứng rồi\"",
+                    "next": "food_festival",
+                    "stats": {
+                        "adventure": 1,
+                        "playful": 1
+                    }
+                },
+                {
+                    "text": "\"Lều chăn! Nhưng chỉ khi có đồ ăn vặt thích hợp\"",
+                    "next": "blanket_fort",
+                    "stats": {
+                        "playful": 2,
+                        "romance": 1
+                    }
+                },
+                {
+                    "text": "\"Tại sao không làm cả ba? Chúng ta có cả ngày mà!\"",
+                    "next": "ambitious_plan",
+                    "stats": {
+                        "adventure": 2,
+                        "playful": 1
+                    }
+                }
+            ]
+        },
+        "art_installation": {
+            "text": "Triển lãm có tên \"Giấc Mơ Kỹ Thuật Số\" - những màn hình tương tác phản ứng với sự chạm và chuyển động.<br><br><span class='character-name'>Alex:</span> \"Điên rồi! Nhìn này, nó đổi màu khi chúng ta đứng gần nhau!\"<br><br>Tác phẩm nghệ thuật tạo ra những hoa văn đẹp khi cả hai bạn di chuyển xung quanh.",
+            "choices": [
+                {
+                    "text": "Chụp ảnh nghệ thuật cùng nhau với tác phẩm",
+                    "next": "afternoon_activity",
+                    "stats": {
+                        "romance": 1,
+                        "thoughtful": 1
+                    }
+                },
+                {
+                    "text": "Cố gắng tìm hiểu công nghệ này hoạt động như thế nào",
+                    "next": "afternoon_activity",
+                    "stats": {
+                        "thoughtful": 2
+                    }
+                },
+                {
+                    "text": "Tạo ra những câu chuyện vui về ý nghĩa của từng tác phẩm",
+                    "next": "afternoon_activity",
+                    "stats": {
+                        "playful": 2
+                    }
+                },
+                {
+                    "text": "Chỉ tận hưởng khoảnh khắc này một cách yên lặng, nắm tay nhau",
+                    "next": "afternoon_activity",
+                    "stats": {
+                        "romance": 2
+                    }
+                }
+            ]
+        },
+        "food_festival": {
+            "text": "Công viên nhộn nhịp với mọi người, âm nhạc và mùi thơm tuyệt vời. Có ít nhất 15 xe đồ ăn khác nhau.<br><br><span class='character-name'>Alex:</span> \"Được rồi, đến lúc chiến thuật. Chúng ta chia sẻ những món khác nhau hay mỗi người gọi riêng?\"",
+            "choices": [
+                {
+                    "text": "\"Hãy lấy một món từ mỗi xe! Ngất vì đồ ăn luôn!\"",
+                    "next": "afternoon_activity",
+                    "stats": {
+                        "adventure": 2,
+                        "playful": 1
+                    }
+                },
+                {
+                    "text": "\"Em muốn tacos Hàn Quốc, anh chọn cái khác và chúng ta chia sẻ\"",
+                    "next": "afternoon_activity",
+                    "stats": {
+                        "romance": 1,
+                        "thoughtful": 1
+                    }
+                },
+                {
+                    "text": "\"Tìm combo kỳ lạ nhất có thể - thách thức được chấp nhận!\"",
+                    "next": "afternoon_activity",
+                    "stats": {
+                        "playful": 2,
+                        "adventure": 1
+                    }
+                },
+                {
+                    "text": "\"Anh biết em thích gì mà, bất ngờ cho em đi!\"",
+                    "next": "afternoon_activity",
+                    "stats": {
+                        "romance": 2
+                    }
+                }
+            ]
+        },
+        "blanket_fort": {
+            "text": "Trở lại căn hộ của <span class='character-name'>Alex</span>, các bạn được bao quanh bởi gối, chăn và dây đèn.<br><br><span class='character-name'>Alex:</span> \"Câu hỏi kỹ thuật: chúng ta nên hướng tới sự thoải mái tối đa hay tính toàn vẹn kiến trúc?\"",
+            "choices": [
+                {
+                    "text": "\"Thoải mái hết cỡ! Em muốn chìm vào cái này\"",
+                    "next": "afternoon_activity",
+                    "stats": {
+                        "romance": 1,
+                        "thoughtful": 1
+                    }
+                },
+                {
+                    "text": "\"Nó cần phải xứng đáng với Instagram. Làm cho nó đẹp!\"",
+                    "next": "afternoon_activity",
+                    "stats": {
+                        "playful": 1,
+                        "thoughtful": 1
+                    }
+                },
+                {
+                    "text": "\"Cả hai! Chúng ta đang xây Pháo Đài của Những Giấc Mơ!\"",
+                    "next": "afternoon_activity",
+                    "stats": {
+                        "adventure": 1,
+                        "playful": 1
+                    }
+                },
+                {
+                    "text": "\"Làm nó đủ lớn cho marathon phim\"",
+                    "next": "afternoon_activity",
+                    "stats": {
+                        "romance": 2
+                    }
+                }
+            ]
+        },
+        "ambitious_plan": {
+            "text": "Bạn quyết định thực hiện cả ba hoạt động! Bạn bắt đầu với triển lãm nghệ thuật, sau đó đến lễ hội đồ ăn, và cuối cùng về căn hộ của <span class='character-name'>Alex</span> để xây lều chăn.<br><br><span class='character-name'>Alex:</span> \"Anh thích tham vọng của em! Đây là lý do tại sao chúng ta hoàn hảo với nhau.\"",
+            "choices": [
+                {
+                    "text": "\"Chúng ta tạo thành một đội khá tốt, phải không?\"",
+                    "next": "afternoon_activity",
+                    "stats": {
+                        "romance": 2,
+                        "thoughtful": 1
+                    }
+                },
+                {
+                    "text": "\"Cuộc sống quá ngắn cho những cuộc phiêu lưu nhỏ!\"",
+                    "next": "afternoon_activity",
+                    "stats": {
+                        "adventure": 2,
+                        "playful": 1
+                    }
+                }
+            ]
+        },
+        "afternoon_activity": {
+            "text": "Khi buổi chiều tiếp tục, cả hai bạn đều có một thời gian tuyệt vời. <span class='character-name'>Alex</span> nhìn bạn với nụ cười đặc biệt đó.<br><br><span class='character-name'>Alex:</span> \"Hôm nay hoàn hảo quá, nhưng anh còn một ý tưởng nữa...\"",
+            "choices": [
+                {
+                    "text": "\"Em thích những ý tưởng của anh hôm nay! Là gì thế?\"",
+                    "next": "surprise_reveal",
+                    "stats": {
+                        "romance": 1,
+                        "thoughtful": 1
+                    }
+                },
+                {
+                    "text": "\"Miễn là không liên quan đến đi bộ thêm nữa 😅\"",
+                    "next": "surprise_reveal",
+                    "stats": {
+                        "playful": 1
+                    }
+                },
+                {
+                    "text": "\"Có liên quan đến đồ ăn không? Xin hãy nói có\"",
+                    "next": "surprise_reveal",
+                    "stats": {
+                        "playful": 2
+                    }
+                },
+                {
+                    "text": "\"Bất ngờ cho em lần nữa đi!\"",
+                    "next": "surprise_reveal",
+                    "stats": {
+                        "adventure": 1,
+                        "romance": 1
+                    }
+                }
+            ]
+        },
+        "surprise_reveal": {
+            "text": "<span class='character-name'>Alex</span> dẫn bạn đến một sân mini golf được chuyển đổi thành \"cuộc phiêu lưu phát sáng trong bóng tối.\"<br><br><span class='character-name'>Alex:</span> \"Anh nhớ em nói em chưa bao giờ chơi glow golf!\"",
+            "choices": [
+                {
+                    "text": "\"Tuyệt vời! Nhưng em dở tệ ở golf thường...\"",
+                    "next": "evening_decision",
+                    "stats": {
+                        "playful": 1,
+                        "thoughtful": 1
+                    }
+                },
+                {
+                    "text": "\"Anh nhớ! Chuẩn bị chứng kiến tài năng mini-golf ẩn giấu của em\"",
+                    "next": "evening_decision",
+                    "stats": {
+                        "playful": 2,
+                        "romance": 1
+                    }
+                },
+                {
+                    "text": "\"Chỉ khi người thua mua kem sau đó\"",
+                    "next": "evening_decision",
+                    "stats": {
+                        "playful": 2
+                    }
+                },
+                {
+                    "text": "\"Em yêu việc anh lắng nghe những bình luận ngẫu nhiên của em 💕\"",
+                    "next": "evening_decision",
+                    "stats": {
+                        "romance": 2,
+                        "thoughtful": 1
+                    }
+                }
+            ]
+        },
+        "evening_decision": {
+            "text": "Cả hai bạn đều mệt mỏi nhưng hạnh phúc, ngồi trên ghế băng ngắm hoàng hôn.<br><br><span class='character-name'>Alex:</span> \"Thứ Bảy tuyệt vời nhất. Nhưng anh đói rồi. Nhà em hay nhà anh để ăn tối?\"",
+            "choices": [
+                {
+                    "text": "\"Nhà em! Em sẽ nấu cho chúng ta cái gì đó tuyệt vời\"",
+                    "next": "cooking_together",
+                    "stats": {
+                        "thoughtful": 2,
+                        "romance": 1
+                    }
+                },
+                {
+                    "text": "\"Nhà anh, nhưng anh phải nấu! Em sẽ giám sát\"",
+                    "next": "alex_cooking",
+                    "stats": {
+                        "playful": 1,
+                        "romance": 1
+                    }
+                },
+                {
+                    "text": "\"Gọi pizza và nằm xuống thôi\"",
+                    "next": "pizza_night",
+                    "stats": {
+                        "playful": 2
+                    }
+                },
+                {
+                    "text": "\"Thế còn quán Thái mới mà chúng ta định thử?\"",
+                    "next": "restaurant_date",
+                    "stats": {
+                        "adventure": 1,
+                        "thoughtful": 1
+                    }
+                }
+            ]
+        },
+        "cooking_together": {
+            "text": "Các bạn cùng nhau trong bếp, nhạc đang phát, làm mì pasta từ đầu.<br><br><span class='character-name'>Alex:</span> \"Em biết không? Cảm giác này như cuộc sống thật. Như... cuộc sống tương lai.\"",
+            "choices": [
+                {
+                    "text": "\"Mỗi ngày với anh đều như thế này\"",
+                    "next": "ending",
+                    "stats": {
+                        "romance": 3
+                    }
+                },
+                {
+                    "text": "\"Chúng ta khá tuyệt vời cùng nhau, phải không?\"",
+                    "next": "ending",
+                    "stats": {
+                        "romance": 2,
+                        "thoughtful": 1
+                    }
+                }
+            ]
+        },
+        "alex_cooking": {
+            "text": "Bạn xem <span class='character-name'>Alex</span> cố gắng làm thứ gì đó ăn được trong khi bạn bình luận và lấy trộm nguyên liệu.<br><br><span class='character-name'>Alex:</span> \"Có em ở đây làm mọi thứ tốt hơn, kể cả việc nấu ăn tệ hại của anh.\"",
+            "choices": [
+                {
+                    "text": "\"Em yêu những cuộc phiêu lưu lười biếng của chúng ta\"",
+                    "next": "ending",
+                    "stats": {
+                        "playful": 2,
+                        "romance": 1
+                    }
+                },
+                {
+                    "text": "\"Đây chính xác là điều em cần hôm nay\"",
+                    "next": "ending",
+                    "stats": {
+                        "thoughtful": 2,
+                        "romance": 1
+                    }
+                }
+            ]
+        },
+        "pizza_night": {
+            "text": "Cả hai bạn đều nằm dài trên ghế sofa, hộp pizza ở khắp nơi, reality TV tệ hại đang phát.<br><br><span class='character-name'>Alex:</span> \"Anh thích việc chúng ta có thể hoàn toàn lười biếng cùng nhau và vẫn hoàn hảo.\"",
+            "choices": [
+                {
+                    "text": "\"Đây chính xác là điều em cần hôm nay\"",
+                    "next": "ending",
+                    "stats": {
+                        "playful": 2,
+                        "romance": 1
+                    }
+                },
+                {
+                    "text": "\"Chúng ta khá tuyệt vời cùng nhau, phải không?\"",
+                    "next": "ending",
+                    "stats": {
+                        "romance": 2,
+                        "thoughtful": 1
+                    }
+                }
+            ]
+        },
+        "restaurant_date": {
+            "text": "Ánh sáng thân mật, chia sẻ món tráng miệng, quan sát những cặp đôi khác.<br><br><span class='character-name'>Alex:</span> \"Em có nghĩ những cặp đôi khác vui vẻ như chúng ta không?\"",
+            "choices": [
+                {
+                    "text": "\"Mỗi ngày với anh đều như thế này\"",
+                    "next": "ending",
+                    "stats": {
+                        "romance": 3
+                    }
+                },
+                {
+                    "text": "\"Chúng ta khá tuyệt vời cùng nhau, phải không?\"",
+                    "next": "ending",
+                    "stats": {
+                        "romance": 2,
+                        "thoughtful": 1
+                    }
+                }
+            ]
+        },
+        "ending": {
+            "text": "ending_placeholder",
+            "choices": []
+        }
+    },
+    "total_scenes": 17,
+    "num_main_scenes": 8
+}
