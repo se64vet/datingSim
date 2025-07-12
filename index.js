@@ -83,7 +83,7 @@ async function loadGameStory(file_path) {
             <div class="ending-screen">
                 <h2 class="ending-title">${ending.title}</h2>
                 <p class="ending-text">${ending.text}</p>
-                <button class="restart-button" onclick="restartGame()">Play Again</button>
+                <button class="restart-button" onclick="restartGame()">Chơi lại</button>
             </div>
         `;
             return;
