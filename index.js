@@ -1,6 +1,8 @@
-async function loadGameStory() {
+const file_path = 'story2.json' // Path to your JSON file
+
+async function loadGameStory(file_path) {
     try {
-        const response = await fetch('story.json'); // Path to your JSON file
+        const response = await fetch(file_path);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -15,7 +17,7 @@ async function loadGameStory() {
 
 // Call the function to load the object when the script runs
 (async () => {
-    const gameStory = await loadGameStory();
+    const gameStory = await loadGameStory(file_path);
 
     // Game State
     let currentScene = 'start';
@@ -27,6 +29,7 @@ async function loadGameStory() {
     };
     let totalScenes = gameStory.num_main_scenes;
     let currentSceneIndex = 0;
+    const endings = gameStory.endings
 
     // Game Functions
     function updateStats(stats) {
@@ -54,30 +57,19 @@ async function loadGameStory() {
         const max = Math.max(gameStats.adventure, gameStats.romance, gameStats.playful, gameStats.thoughtful);
 
         if (gameStats.romance >= 8) {
-            return {
-                title: "💕 Perfect Chemistry",
-                text: "You and Alex have discovered something truly special. The day was filled with romantic moments, deep connections, and genuine affection. As you cuddle together, you both feel like you've found your perfect match. This is just the beginning of many beautiful adventures together."
-            };
+            return endings['perfect chemistry'];
+
         } else if (gameStats.adventure >= 6) {
-            return {
-                title: "🌟 Adventure Partners",
-                text: "You and Alex are the perfect adventure team! Today proved that you both crave excitement and new experiences. Whether it's trying new foods, exploring art, or taking on challenges together, you've found someone who matches your adventurous spirit. The future looks bright and full of exciting possibilities."
-            };
+            return endings['adventure partners'];
+
         } else if (gameStats.playful >= 6) {
-            return {
-                title: "😄 Playful Soulmates",
-                text: "Laughter and joy filled every moment of your day together. You and Alex bring out the best in each other's playful sides, creating a relationship full of fun, spontaneity, and happiness. Your ability to find joy in simple moments together is truly special."
-            };
+            return endings['playful soulmates'];
+
         } else if (gameStats.thoughtful >= 6) {
-            return {
-                title: "💭 Deep Connection",
-                text: "Today revealed the depth of your connection with Alex. Your thoughtful choices and meaningful conversations have created a bond that goes beyond surface-level attraction. You've found someone who truly understands you and values the same things in life."
-            };
+            return endings['deep connection'];
+
         } else {
-            return {
-                title: "💝 Sweet Harmony",
-                text: "Your balanced approach to the day created a perfect harmony between romance, adventure, playfulness, and thoughtfulness. You and Alex complement each other beautifully, and your relationship feels natural and comfortable. This is the kind of love that lasts."
-            };
+            return endings['sweet harmony'];
         }
     }
 
